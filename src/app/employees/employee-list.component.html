@@ -1,0 +1,68 @@
+<div class="card">
+    <div class="card-header">
+        Employee List
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-1">
+                Filter by:
+            </div>
+            <div class="col-md-3">
+                <input type="text"
+                       [(ngModel)]='listFilter'/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h4>Filter by: {{listFilter}}</h4>
+            </div>
+        </div>
+    <div class="table-responsive">
+        <table class="table" *ngIf='employees && employees.length'>
+            <thead>
+                <tr>
+                    <th><button 
+                            class="btn btn-primary"
+                            (click)='toggleImage()'>
+                            {{showImage ? 'Hide' : 'Show'}} Image</button></th>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Gender</th>
+                    <th>Address</th>
+                    <th>Department</th>
+                    <th></th>
+                    <th></th>
+                    <th><button 
+                        class="btn btn-info">
+                        Create</button></th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor='let employee of employees'>
+                <td><img 
+                    [src]='employee.EmployeeImgUrl'
+                    [style.width.px]='imageWidth'
+                    [style.margin.px]='imageMargin'
+                    *ngIf='showImage'></td>
+                <td>{{employee.EmployeeId}}</td>
+                <td>{{employee.EmployeeFirstName}}</td>
+                <td>{{employee.EmployeeLastName}}</td>
+                <td>{{employee.EmployeeGender}}</td>
+                <td>{{employee.EmployeeAddress}}</td>
+                <td>{{employee.EmployeeDepartment}}</td>
+                <td><a [routerLink]="['/employees', employee.EmployeeId]"><button 
+                        class="btn btn-success">
+                        Details</button></a></td>
+                <td><button 
+                        class="btn btn-success">
+                        Update</button></td>
+                <td><button 
+                        class="btn btn-success">
+                        Delete</button></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+</div>

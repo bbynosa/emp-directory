@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "4985baa5-6ba5-4803-828d-48111174877e"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -25,7 +28,8 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/api"
             ],
             "styles": [
               "src/styles.css"

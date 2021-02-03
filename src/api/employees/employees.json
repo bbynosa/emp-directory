@@ -1,0 +1,29 @@
+[
+    {
+      "employeeId": 1,
+      "employeeFirstName": "John",
+      "employeeLastName": "Smith",
+      "employeeGender": "Male",
+      "employeeAddress": "US",
+      "employeeDepartment": "Software Engineering",
+      "employeeImgUrl": "assets/images/softeng.png"
+    },
+    {
+        "employeeId": 2,
+        "employeeFirstName": "Martha",
+        "employeeLastName": "Jones",
+        "employeeGender": "Female",
+        "employeeAddress": "UK",
+        "employeeDepartment": "Infrastructure",
+        "employeeImgUrl": "assets/images/infra.png"
+    },
+    {
+        "employeeId": 5,
+        "employeeFirstName": "Juan",
+        "employeeLastName": "Cruz",
+        "employeeGender": "Male",
+        "employeeAddress": "Philippines",
+        "employeeDepartment": "Software Engineering",
+        "employeeImgUrl": "assets/images/softeng.png"
+    }
+]
